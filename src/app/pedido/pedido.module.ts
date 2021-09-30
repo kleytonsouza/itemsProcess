@@ -6,7 +6,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ClienteService } from '../cliente/services/cliente.service';
 import { InserirPedidoComponent } from './inserir-pedido/inserir-pedido.component';
 import { EditarPedidoComponent } from './editar-pedido/editar-pedido.component';
-import { DirectivesDirective } from './directives/directives.directive';
+import { NumericoDirective } from '../cliente/directives';
+
 
 
 const LS_CHAVE: string = "pedidos";
@@ -16,7 +17,7 @@ const LS_CHAVE: string = "pedidos";
     PedidoComponent,
     InserirPedidoComponent,
     EditarPedidoComponent,
-    DirectivesDirective
+    NumericoDirective
   ],
   imports: [
     CommonModule

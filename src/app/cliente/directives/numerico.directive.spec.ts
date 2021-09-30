@@ -1,4 +1,3 @@
-import { ElementRef } from '@angular/core';
 import { NumericoDirective } from './numerico.directive';
 
 describe('NumericoDirective', () => {

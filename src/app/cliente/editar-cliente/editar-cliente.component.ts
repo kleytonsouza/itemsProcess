@@ -5,7 +5,7 @@ import { ClienteService } from '../services/cliente.service';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-editar-cliente',
+  selector: 'app-edit-client',
   templateUrl: './editar-cliente.component.html',
   styleUrls: ['./editar-cliente.component.css']
 })
