@@ -18,7 +18,7 @@
                 [(ngModel)]="cliente.cpf" #cpf="ngModel" numerico>
             </div>
             <div class="form-group">
-                <button style="margin-right: 20px;" type="button" class="btn btn-primary" (click)="atualizar()" [disabled]="!formCliente.form.valid">
+                <button style="margin-right: 20px;" type="button" class="btn btn-primary" (click)="atualizar(cpf.value)" [disabled]="!formCliente.form.valid">
                     <i class="fa fa-save" aria-hidden="true"></i>
                     Atualizar
                 </button>

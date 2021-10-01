@@ -30,6 +30,7 @@ export class InserirClienteComponent implements OnInit {
       const result = this.clienteService.buscarPorId(this.cliente.cpf!);
     
       if ( result !== undefined){
+        confirm(`CPF já cadastrado ${this.cliente.cpf}`)
         throw new Error ("CPF já cadastrado = " + this.cliente.cpf);
       } 
      
