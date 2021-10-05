@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PedidoComponent } from './pedido.component';
+import { PedidoComponent } from './listar-pedido.component';
 
 describe('PedidoComponent', () => {
   let component: PedidoComponent;

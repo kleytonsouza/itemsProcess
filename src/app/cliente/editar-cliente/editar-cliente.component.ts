@@ -33,19 +33,21 @@ export class EditarClienteComponent implements OnInit {
       throw new Error ("Cliente não encontrado: cpf = " + cpf);
   }
 
-  atualizar(cpf: string): void{
+  
+  atualizar(): void{
 
-    const result = this.clienteService.buscarPorId(cpf);
+    let currentCpf = this.route.snapshot.params['cpf'];
     
-      
-    if (this.cliente.cpf !== cpf || result !== undefined){
+    const hasCpf = this.clienteService.buscarPorId(this.cliente.cpf);
+
+    const isThisCpf  = this.cliente.cpf == currentCpf;
+
+    if (!isThisCpf && hasCpf !== undefined){
       confirm(`CPF já cadastrado ${this.cliente.cpf}`)
       throw new Error ("CPF já cadastrado = " + this.cliente.cpf);
     }
-
-
-
-    if (this.formCliente.form.valid) {
+    
+    if (this.formCliente.form.valid && hasCpf == undefined) {
       this.clienteService.atualizar(this.cliente);
       this.router.navigate( ["/"] );
     }

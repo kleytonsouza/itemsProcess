@@ -13,7 +13,7 @@ import { ClienteModule } from './cliente/cliente.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ClienteModule
+    ClienteModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

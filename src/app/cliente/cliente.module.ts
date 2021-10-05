@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { InserirClienteComponent } from './inserir-cliente/inserir-cliente.component';
 import { EditarClienteComponent } from './editar-cliente/editar-cliente.component';
-import { NumericoDirective } from './directives';
+import { NumericoDirective } from '../shared/directives';
 
 
 
@@ -23,9 +23,11 @@ import { NumericoDirective } from './directives';
     CommonModule,
     RouterModule,
     FormsModule
+    
   ],
   providers: [
     ClienteService
   ]
 })
+
 export class ClienteModule { }

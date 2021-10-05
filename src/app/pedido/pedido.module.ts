@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PedidoComponent } from './listar-pedido/pedido.component';
 import { Pedido } from '../shared';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { ClienteService } from '../cliente/services/cliente.service';
+import { ListarPedidoComponent } from './listar-pedido/listar-pedido.component';
 import { InserirPedidoComponent } from './inserir-pedido/inserir-pedido.component';
 import { EditarPedidoComponent } from './editar-pedido/editar-pedido.component';
-import { NumericoDirective } from '../cliente/directives';
 
 
 
@@ -14,17 +13,16 @@ const LS_CHAVE: string = "pedidos";
 
 @NgModule({
   declarations: [
-    PedidoComponent,
+    ListarPedidoComponent,
     InserirPedidoComponent,
     EditarPedidoComponent,
-    NumericoDirective
   ],
   imports: [
     CommonModule
   ]
 })
 
-export class PedidoModule {
+export class ListarPedidoModule {
 
 
   constructor(private route: ActivatedRoute, private clienteService: ClienteService){}

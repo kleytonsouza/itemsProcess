@@ -4,7 +4,7 @@ import { EditarClienteComponent } from './cliente/editar-cliente/editar-cliente.
 
 import { InserirClienteComponent } from './cliente/inserir-cliente/inserir-cliente.component';
 import { ListarClienteComponent } from './cliente/listar-cliente/listar-cliente.component';
-import { PedidoComponent } from './pedido/listar-pedido/pedido.component';
+import { ListarPedidoComponent } from './pedido/listar-pedido/listar-pedido.component';
 
 const routes: Routes = [
   {
@@ -22,7 +22,7 @@ const routes: Routes = [
   },
   {
     path: 'clientes/pedido',
-    component: PedidoComponent
+    component: ListarPedidoComponent
   },
   {
     path: 'clientes/novo',

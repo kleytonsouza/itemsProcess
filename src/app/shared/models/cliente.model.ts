@@ -3,22 +3,17 @@ export class Cliente {
     static _id: number = 0;
     public id: number;  
 
-    constructor(public cpf: string, public nome?: string, public sobrenome?: string, public pedido?: string )
+    constructor(public cpf: string, public nome?: string, public sobrenome?: string, public pedido?: [Pedido] )
     { 
         this.id = Cliente._id++
-    }
-
-    
+    }  
 }
 
 export class Pedido{
-    id_cliente!: Cliente;    
-
-    constructor(public cliente: Cliente, public produto: Produto, public quantidade: number){
-        this.id_cliente = cliente;
-        this.produto = produto;
-        this.quantidade = quantidade;
-
+    
+    constructor(public cliente: Cliente, public itemsPedido: [itemDoPedido]){
+        this.cliente = cliente;
+        this.itemsPedido = itemsPedido;      
     }
 
 }
